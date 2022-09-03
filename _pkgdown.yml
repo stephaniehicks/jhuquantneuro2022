@@ -1,0 +1,33 @@
+url: https://stephaniehicks.com/jhuquantneuro2022
+
+template:
+  params:
+    bootstrap: 3
+    bootswatch: flatly
+
+home:
+  title: "JHU ME 2022"
+  type: inverse
+
+
+navbar:
+  structure:
+    left:  [intro, articles]
+    right: [twitter, github]
+  components:
+    twitter:
+      icon: fa-twitter
+      href: http://twitter.com/stephaniehicks
+    github:
+      icon: fa-github
+      href: https://github.com/stephaniehicks/jhuquantneuro2022
+
+articles:
+  - title: Course material for Quant Neuro in Fall 2022
+    navbar: ~
+    contents:
+    - welcome
+    - intro-bioconductor
+    - intro-single-cell
+    - data-viz
+

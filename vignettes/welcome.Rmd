@@ -1,0 +1,92 @@
+---
+title: "Get Started"
+description: >
+  Learn how to get started with the CSHL Genome Scale Data materials from Stephanie Hicks
+author: "Stephanie Hicks"
+output:
+  rmarkdown::html_document:
+   highlight: pygments
+   toc: true
+   toc_depth: 3
+   fig_width: 5
+vignette: >
+  %\VignetteIndexEntry{Getting Started}
+  %\VignetteEncoding[ut8]{inputenc}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+
+# Create a copy of this repository
+
+You can create a new GitHub repository in your own GitHub account that is 
+a copy of this repository for yourself to edit/write code and notes. 
+Github calls this "creating a template repository." 
+This is different than a fork because there will be no link between the original and your repository.
+From there, you can clone the repository with the `git clone` command and run / edit the code in the repository.
+
+Creating a repository with the template can be done in the following way: 
+
+- Go to https://github.com/stephaniehicks/jhuquantneuro2022
+- Click on the "Use this template" button at the top of the GitHub template repository
+
+![](https://docs.github.com/assets/cb-36544/images/help/repository/use-this-template-button.png)
+
+From there, you can [follow these instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template). However do not optionally select "**Include all branches**" as you do not need this for your own projects.
+
+# Software
+
+I will make heavy use of R, so you should have R installed. You can obtain R from the [Comprehensive R Archive Network](https://cran.r-project.org). There are versions available for Mac, Windows, and Unix/Linux. This software is **required** for this course.	
+
+It is important that you have the latest version of R installed. I will be using **R version `r paste(version$major, version$minor, sep = ".")`**. You can determine what version of R you have by starting up R and typing into the console `R.version.string` and hitting the `return`/`enter` key. If you do not have the latest version of R installed, go to [CRAN](https://cran.r-project.org) and download and install the latest version.
+
+I will also make use of the RStudio interactive development environment (IDE). RStudio requires that R be installed, and so is an "add-on" to R. You can obtain the RStudio Desktop for free from the [RStudio web site](https://www.rstudio.com/). 
+
+## Install packages
+
+These materials use Bioconductor version 3.15.
+This is the current 'release' version of Bioconductor, which can be installed following [these instructions](https://bioconductor.org/install).
+
+For example, you can then install a subset of the packages necessary for these tutorials using the following:
+
+```
+library(BiocManager)
+install(c("SingleCellExperiment", "TENxPBMCData", "scater", "scran",
+  "scry", "mbkmeans"))
+```
+
+Please see the [`DESCRIPTION`](https://github.com/stephaniehicks/cshlgsd2022/blob/main/DESCRIPTION) for a full list of dependencies.
+
+
+# Schedule
+
+::: l-body-outset
+| Day (time)   | Schedule     | Topics (`r emojifont::emoji('woman_technologist')` Lecture, `r emojifont::emoji('palm_tree')` Lab )                                       | 
+|------------------ | ---------------------- | ------------------------------------------------------------------------ |
+| **Module 1** |    | **Bioconductor; bulk and single-cell RNA-seq** |
+| | | |
+|   Sept 12 (11:30am-1pm)   |  11:30-11:45am | `r emojifont::emoji('woman_technologist')` Introduction to Bioconductor and bulk RNA-seq [[slides]()] [[html](intro-bioconductor.html)] [[Rmd]()] | 
+| |  11:45am-12:15pm | `r emojifont::emoji('woman_technologist')` Introduction to single-cell analysis in R/Bioconductor [[slides]()] [[html](intro-single-cell.html)] [[Rmd](https://github.com/stephaniehicks/jhuquantneuro2022/blob/main/vignettes/intro-single-cell.Rmd)] | 
+| | 12:15-12:45pm | `r emojifont::emoji('woman_technologist')` Advanced single-cell analysis in R/Bioconductor [[slides]()] [[html](intro-single-cell.html)] [[Rmd](https://github.com/stephaniehicks/jhuquantneuro2022/blob/main/vignettes/intro-single-cell.Rmd)] |  |
+| | 12:45-1pm | **pick one of the labs below to read through until 1pm** | 
+| |  |  `r emojifont::emoji('palm_tree')` Lab (Getting single-cell data) [[html](https://bioconductor.org/books/3.15/OSCA.intro/getting-scrna-seq-datasets.html)] |
+|  |   |  `r emojifont::emoji('palm_tree')` Lab (`SingleCellExperiment` class) [[html](https://bioconductor.org/books/3.15/OSCA.intro/the-singlecellexperiment-class.html)] |
+|  |   |  `r emojifont::emoji('palm_tree')` Lab (Importing counts from `salmon alevin` into R/Bioc) [[html](https://mikelove.github.io/alevin2bioc/articles/alevin2bioc.html)] |
+| | | `r emojifont::emoji('palm_tree')` Lab (Quality control) [[html](http://bioconductor.org/books/3.15/OSCA.basic/quality-control.html)] |
+| |  |   `r emojifont::emoji('palm_tree')` Lab (Normalization) [[html](https://bioconductor.org/books/3.15/OSCA.basic/normalization.html)] |
+| |  |  `r emojifont::emoji('palm_tree')` Lab (Feature selection) [[html](https://bioconductor.org/books/3.15/OSCA.basic/feature-selection.html)] |
+| | | `r emojifont::emoji('palm_tree')` Lab (Dim reduction) [[html](https://bioconductor.org/books/3.15/OSCA.basic/dimensionality-reduction.html)] |
+| | |  `r emojifont::emoji('palm_tree')` Lab (Clustering) [[html](https://bioconductor.org/books/3.15/OSCA.basic/clustering.html)] |
+| | |  `r emojifont::emoji('palm_tree')` Lab (Marker gene detection) [[html](https://bioconductor.org/books/3.15/OSCA.basic/marker-detection.html)] |
+| | |  `r emojifont::emoji('palm_tree')` Lab (Cell type annotation) [[html](https://bioconductor.org/books/3.15/OSCA.basic/cell-type-annotation.html)] |
+| | | | 
+| **Module 2** |    | **Data visualizations and basics of tidyverse** |
+| | | |
+| Sept 16 (11:30am-1pm)   |  11:30-11:45am  | `r emojifont::emoji('woman_technologist')`  |
+| | 9:50-10am | **10min break** | 
+| | 10-10:30am | **Open question time; Wrap-up** |
+:::

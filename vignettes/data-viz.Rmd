@@ -1,0 +1,69 @@
+---
+title: "Data visualizations and the tidyverse"
+description: >
+  An introduction to data visualizations and the tidyverse
+author: "Stephanie Hicks"
+output:
+  rmarkdown::html_document:
+   highlight: pygments
+   toc: true
+   toc_depth: 3
+vignette: >
+  %\VignetteIndexEntry{Data visualization and the tidyverse}
+  %\VignetteEncoding[ut8]{inputenc}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+
+# Overview
+
+
+## Key resources
+
+- Workshop material: [pkgdown website](https://stephaniehicks.com/jhuquantneuro2022)
+- Code: [GitHub](https://github.com/stephaniehicks/jhuquantneuro2022)
+
+
+
+# Data visualizations and the tidyverse
+
+## Read ahead
+
+**Before the tutorial, you can prepare by reading the following materials:**
+
+1. 
+2. 
+3. 
+
+
+## Acknowledgements
+
+Material for this lecture was borrowed and adopted from
+
+- 
+- 
+
+
+## Learning objectives
+
+1. 
+2. 
+3. 
+
+
+## Overview
+
+
+
+
+# Session Info
+
+```{r}
+sessionInfo()
+```
+
