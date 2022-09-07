@@ -26,8 +26,8 @@ articles:
   - title: Course material for Quant Neuro in Fall 2022
     navbar: ~
     contents:
-    - welcome
     - intro-bioconductor
     - intro-single-cell
     - data-viz
+    - problem-set
 

@@ -14,8 +14,6 @@ Imports:
   SingleCellExperiment,
   scater,
   scran,
-  emojifont, 
-  HCAData, 
   scRNAseq,
   uwot,
   here,

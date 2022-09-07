@@ -1,0 +1,13 @@
+pandoc: '2.18'
+pkgdown: 2.0.6
+pkgdown_sha: ~
+articles:
+  data-viz: data-viz.html
+  intro-bioconductor: intro-bioconductor.html
+  intro-single-cell: intro-single-cell.html
+  problem-set: problem-set.html
+last_built: 2022-09-07T19:41Z
+urls:
+  reference: https://stephaniehicks.com/jhuquantneuro2022/reference
+  article: https://stephaniehicks.com/jhuquantneuro2022/articles
+
