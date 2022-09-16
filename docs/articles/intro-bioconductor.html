@@ -540,16 +540,16 @@ function, or <code>mcols</code>:</p>
 <span><span class="co">## ENSG00000239945       chromosome RP11-34P13.8                             NA</span></span>
 <span><span class="co">##                      score</span></span>
 <span><span class="co">##                  &lt;numeric&gt;</span></span>
-<span><span class="co">## ENSG00000223972 -1.8669329</span></span>
-<span><span class="co">## ENSG00000227232  0.7566233</span></span>
-<span><span class="co">## ENSG00000278267  1.3790861</span></span>
-<span><span class="co">## ENSG00000243485  0.0844189</span></span>
-<span><span class="co">## ENSG00000237613 -1.7808291</span></span>
-<span><span class="co">## ENSG00000268020  1.6145804</span></span>
-<span><span class="co">## ENSG00000240361  0.4629833</span></span>
-<span><span class="co">## ENSG00000186092 -0.8461928</span></span>
-<span><span class="co">## ENSG00000238009  0.4029189</span></span>
-<span><span class="co">## ENSG00000239945  0.8497002</span></span></code></pre>
+<span><span class="co">## ENSG00000223972  2.1701177</span></span>
+<span><span class="co">## ENSG00000227232  0.0461614</span></span>
+<span><span class="co">## ENSG00000278267  2.7315729</span></span>
+<span><span class="co">## ENSG00000243485  0.2195109</span></span>
+<span><span class="co">## ENSG00000237613  1.0484915</span></span>
+<span><span class="co">## ENSG00000268020 -1.7197824</span></span>
+<span><span class="co">## ENSG00000240361  0.2221783</span></span>
+<span><span class="co">## ENSG00000186092 -0.5916436</span></span>
+<span><span class="co">## ENSG00000238009 -1.4931525</span></span>
+<span><span class="co">## ENSG00000239945 -2.4350805</span></span></code></pre>
 <p>Adding data to the column metadata is even easier, we can just use
 <code>$</code>:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
@@ -558,12 +558,12 @@ function, or <code>mcols</code>:</p>
 <pre><code><span><span class="co">## DataFrame with 6 rows and 4 columns</span></span>
 <span><span class="co">##     sample condition  treated librarySize</span></span>
 <span><span class="co">##   &lt;factor&gt;  &lt;factor&gt; &lt;factor&gt;   &lt;numeric&gt;</span></span>
-<span><span class="co">## 1        1         A        0     1886535</span></span>
-<span><span class="co">## 2        2         A        1     1920367</span></span>
-<span><span class="co">## 3        3         B        0     1289216</span></span>
-<span><span class="co">## 4        4         B        1     1001677</span></span>
-<span><span class="co">## 5        5         C        0     1350189</span></span>
-<span><span class="co">## 6        6         C        1     1242602</span></span></code></pre>
+<span><span class="co">## 1        1         A        0     1940042</span></span>
+<span><span class="co">## 2        2         A        1     1696274</span></span>
+<span><span class="co">## 3        3         B        0     1799309</span></span>
+<span><span class="co">## 4        4         B        1     1573100</span></span>
+<span><span class="co">## 5        5         C        0     1102580</span></span>
+<span><span class="co">## 6        6         C        1     1782852</span></span></code></pre>
 </div>
 <div class="section level4">
 <h4 id="using-the-ranges-of-a-se">Using the ranges of a SE<a class="anchor" aria-label="anchor" href="#using-the-ranges-of-a-se"></a>
@@ -598,19 +598,23 @@ object):</p>
 <span><span class="co">##   ENSG00000227232 unprocessed_pseudogene       chromosome      WASH7P</span></span>
 <span><span class="co">##   ENSG00000243485                lincRNA       chromosome   MIR1302-2</span></span>
 <span><span class="co">##   ENSG00000237613                lincRNA       chromosome     FAM138A</span></span>
-<span><span class="co">##                               entrezid      score</span></span>
-<span><span class="co">##                                 &lt;list&gt;  &lt;numeric&gt;</span></span>
-<span><span class="co">##   ENSG00000227232                 &lt;NA&gt;  0.7566233</span></span>
-<span><span class="co">##   ENSG00000243485  105376912,100302278  0.0844189</span></span>
-<span><span class="co">##   ENSG00000237613 654835,645520,641702 -1.7808291</span></span>
+<span><span class="co">##                               entrezid     score</span></span>
+<span><span class="co">##                                 &lt;list&gt; &lt;numeric&gt;</span></span>
+<span><span class="co">##   ENSG00000227232                 &lt;NA&gt; 0.0461614</span></span>
+<span><span class="co">##   ENSG00000243485  105376912,100302278 0.2195109</span></span>
+<span><span class="co">##   ENSG00000237613 654835,645520,641702 1.0484915</span></span>
 <span><span class="co">##   -------</span></span>
 <span><span class="co">##   seqinfo: 25 sequences (1 circular) from GRCh38 genome</span></span></code></pre>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">assay</a></span><span class="op">(</span><span class="va">se_sub</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##                       [,1]      [,2]      [,3]       [,4]      [,5]       [,6]</span></span>
-<span><span class="co">## ENSG00000227232 -1.9534394 0.7454015 1.2408859  1.2038728  1.237548 -0.8635648</span></span>
-<span><span class="co">## ENSG00000243485  0.1005716 1.0846451 1.7440159 -0.4012445 -2.041908 -1.3596597</span></span>
-<span><span class="co">## ENSG00000237613  1.2222214 0.3477807 0.7052105 -0.4147336  0.857694  0.2987943</span></span></code></pre>
+<pre><code><span><span class="co">##                        [,1]      [,2]       [,3]      [,4]       [,5]</span></span>
+<span><span class="co">## ENSG00000227232 -0.08079092 -1.585902 -0.5836049 0.7321954 -0.9666263</span></span>
+<span><span class="co">## ENSG00000243485 -1.29885760  1.298616 -0.2868365 0.2591491 -1.6483581</span></span>
+<span><span class="co">## ENSG00000237613  0.84994374 -1.451339 -1.7064174 1.2807216  0.2915711</span></span>
+<span><span class="co">##                       [,6]</span></span>
+<span><span class="co">## ENSG00000227232 -2.2637416</span></span>
+<span><span class="co">## ENSG00000243485 -0.3265077</span></span>
+<span><span class="co">## ENSG00000237613  0.1643328</span></span></code></pre>
 <p>Another useful property is that we know metadata about the
 chromosomes, and the version of the genome.</p>
 <ul>

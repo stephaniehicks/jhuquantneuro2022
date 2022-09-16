@@ -254,9 +254,9 @@ variable to different values in a new variable (when used in a
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 3 × 1</span></span></span>
 <span><span class="co">##        x</span></span>
 <span><span class="co">##    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">1</span> -<span style="color: #BB0000;">0.638</span></span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">2</span> -<span style="color: #BB0000;">0.853</span></span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">3</span>  0.374</span></span></code></pre>
+<span><span class="co">## <span style="color: #BCBCBC;">1</span> -<span style="color: #BB0000;">0.630</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">2</span>  0.465</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">3</span>  1.67</span></span></code></pre>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## Create a new column that indicates whether the value of 'x' is positive or negative</span></span>
 <span><span class="va">dat</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -267,16 +267,16 @@ variable to different values in a new variable (when used in a
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 100 × 2</span></span></span>
 <span><span class="co">##         x is_positive</span></span>
 <span><span class="co">##     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      </span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 1</span> -<span style="color: #BB0000;">0.638</span> No         </span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 2</span> -<span style="color: #BB0000;">0.853</span> No         </span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 3</span>  0.374 Yes        </span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 4</span> -<span style="color: #BB0000;">1.20</span>  No         </span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 5</span>  0.761 Yes        </span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 6</span> -<span style="color: #BB0000;">0.228</span> No         </span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 7</span> -<span style="color: #BB0000;">1.01</span>  No         </span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 8</span> -<span style="color: #BB0000;">0.283</span> No         </span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 9</span>  0.752 Yes        </span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">10</span> -<span style="color: #BB0000;">0.349</span> No         </span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 1</span> -<span style="color: #BB0000;">0.630</span> No         </span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 2</span>  0.465 Yes        </span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 3</span>  1.67  Yes        </span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 4</span> -<span style="color: #BB0000;">1.04</span>  No         </span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 5</span> -<span style="color: #BB0000;">0.170</span> No         </span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 6</span>  1.97  Yes        </span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 7</span> -<span style="color: #BB0000;">1.55</span>  No         </span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 8</span> -<span style="color: #BB0000;">0.276</span> No         </span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 9</span>  1.51  Yes        </span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">10</span> -<span style="color: #BB0000;">2.15</span>  No         </span></span>
 <span><span class="co">## <span style="color: #949494;"># … with 90 more rows</span></span></span></code></pre>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Add your solution here</span></span></code></pre></div>

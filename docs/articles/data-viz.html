@@ -283,9 +283,10 @@ several functions in the <code>read_*()</code> family.</p>
 <span><span class="co">## <span style="color: #BCBCBC;">10</span>       10 Chile      </span></span>
 <span><span class="co">## <span style="color: #949494;"># … with 22 more rows</span></span></span></code></pre>
 </div>
-<div class="section level3">
-<h3 id="data-frames-and-tibbles">Data frames and tibbles<a class="anchor" aria-label="anchor" href="#data-frames-and-tibbles"></a>
-</h3>
+</div>
+<div class="section level2">
+<h2 id="data-frames-and-tibbles">Data frames and tibbles<a class="anchor" aria-label="anchor" href="#data-frames-and-tibbles"></a>
+</h2>
 <p>The <strong>data frame</strong> (or <code>data.frame</code>) is a
 <strong>key data structure</strong> in statistics and in R.</p>
 <p>The basic structure of a data frame is that there is <strong>one
@@ -299,9 +300,9 @@ in R whose syntax is not very intuitive. The <code>dplyr</code> package
 in the <code>tidyverse</code> is designed to mitigate a lot of these
 problems and to provide a highly optimized set of routines specifically
 for dealing with data frames.</p>
-<div class="section level4">
-<h4 id="tibbles">Tibbles<a class="anchor" aria-label="anchor" href="#tibbles"></a>
-</h4>
+<div class="section level3">
+<h3 id="tibbles">Tibbles<a class="anchor" aria-label="anchor" href="#tibbles"></a>
+</h3>
 <p>Another type of data structure that we need to discuss is called the
 <strong>tibble</strong>! It’s best to think of tibbles as an updated and
 stylish version of the <code>data.frame</code>.</p>
@@ -313,9 +314,10 @@ you work with tidyverse and tidyverse-adjacent packages, the more you
 will see the advantages of using tibbles.</p>
 <p>Before we go any further, tibbles <em>are</em> data frames, but they
 have some new bells and whistles to make your life easier.</p>
-<div class="section level5">
-<h5 id="how-tibbles-differ-from-data-frame">How tibbles differ from <code>data.frame</code><a class="anchor" aria-label="anchor" href="#how-tibbles-differ-from-data-frame"></a>
-</h5>
+</div>
+<div class="section level3">
+<h3 id="how-tibbles-differ-from-data-frame">How tibbles differ from <code>data.frame</code><a class="anchor" aria-label="anchor" href="#how-tibbles-differ-from-data-frame"></a>
+</h3>
 <p>There are a number of differences between tibbles and
 <code>data.frames</code>.</p>
 <p><strong>Note</strong>: To see a full vignette about tibbles and how
@@ -343,11 +345,10 @@ entire huge data frame out. By default, it just shows what fits to your
 screen.</li>
 </ul>
 </div>
-</div>
-<div class="section level4">
-<h4 id="as_tibble">
+<div class="section level3">
+<h3 id="as_tibble">
 <code>as_tibble()</code><a class="anchor" aria-label="anchor" href="#as_tibble"></a>
-</h4>
+</h3>
 <p>Since many packages use the historical <code>data.frame</code> from
 base R, you will often find yourself in the situation that you have a
 <code>data.frame</code> and want to convert that <code>data.frame</code>
@@ -393,7 +394,6 @@ following:</p>
 <span><span class="co">##  $ pm10tmean2: num [1:6940] 34 NA 34.2 47 NA ...</span></span>
 <span><span class="co">##  $ o3tmean2  : num [1:6940] 4.25 3.3 3.33 4.38 4.75 ...</span></span>
 <span><span class="co">##  $ no2tmean2 : num [1:6940] 20 23.2 23.8 30.4 30.3 ...</span></span></code></pre>
-</div>
 </div>
 </div>
 <div class="section level2">
@@ -486,7 +486,7 @@ as functions in other packages. For now you can ignore the warnings.</p>
 <p>We will continue to use the <code>chicago</code> dataset containing
 air pollution and temperature data.</p>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">chicago</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html" class="external-link">as_tibble</a></span><span class="op">(</span><span class="va">chicago</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">chicago</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html" class="external-link">as_tibble</a></span><span class="op">(</span><span class="va">chicago</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">chicago</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## tibble [6,940 × 8] (S3: tbl_df/tbl/data.frame)</span></span>
 <span><span class="co">##  $ city      : chr [1:6940] "chic" "chic" "chic" "chic" ...</span></span>
@@ -528,7 +528,7 @@ can use it to specify a range of variable names.</p>
 <code><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select()</a></code> function by using the negative sign. With
 <code><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select()</a></code> you can do</p>
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="op">-</span><span class="op">(</span><span class="va">city</span><span class="op">:</span><span class="va">dptp</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="op">-</span><span class="op">(</span><span class="va">city</span><span class="op">:</span><span class="va">dptp</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>which indicates that we should include every variable <em>except</em>
 the variables <code>city</code> through <code>dptp</code>. The
 equivalent code in base R would be</p>
@@ -542,7 +542,7 @@ allows you to specify variable names based on patterns. So, for example,
 if you wanted to keep every variable that ends with a “2”, we could
 do</p>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">subset</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">ends_with</a></span><span class="op">(</span><span class="st">"2"</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">subset</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">ends_with</a></span><span class="op">(</span><span class="st">"2"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">subset</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## tibble [6,940 × 4] (S3: tbl_df/tbl/data.frame)</span></span>
 <span><span class="co">##  $ pm25tmean2: num [1:6940] NA NA NA NA NA NA NA NA NA NA ...</span></span>
@@ -552,7 +552,7 @@ do</p>
 <p>Or if we wanted to keep every variable that starts with a “d”, we
 could do</p>
 <div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">subset</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">starts_with</a></span><span class="op">(</span><span class="st">"d"</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">subset</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">starts_with</a></span><span class="op">(</span><span class="st">"d"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">subset</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## tibble [6,940 × 2] (S3: tbl_df/tbl/data.frame)</span></span>
 <span><span class="co">##  $ dptp: num [1:6940] 31.5 29.9 27.4 28.6 28.9 ...</span></span>
@@ -576,7 +576,7 @@ in my experience.</p>
 data frame where the levels of PM2.5 are greater than 30 (which is a
 reasonably high level), we could do</p>
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">chic.f</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">pm25tmean2</span> <span class="op">&gt;</span> <span class="fl">30</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">chic.f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">pm25tmean2</span> <span class="op">&gt;</span> <span class="fl">30</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">chic.f</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## tibble [194 × 8] (S3: tbl_df/tbl/data.frame)</span></span>
 <span><span class="co">##  $ city      : chr [1:194] "chic" "chic" "chic" "chic" ...</span></span>
@@ -598,8 +598,8 @@ the distribution of the <code>pm25tmean2</code> values is.</p>
 PM2.5 is greater than 30 <em>and</em> temperature is greater than 80
 degrees Fahrenheit.</p>
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">chic.f</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">pm25tmean2</span> <span class="op">&gt;</span> <span class="fl">30</span> <span class="op">&amp;</span> <span class="va">tmpd</span> <span class="op">&gt;</span> <span class="fl">80</span><span class="op">)</span></span>
-<span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chic.f</span>, <span class="va">date</span>, <span class="va">tmpd</span>, <span class="va">pm25tmean2</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">chic.f</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">pm25tmean2</span> <span class="op">&gt;</span> <span class="fl">30</span> <span class="op">&amp;</span> <span class="va">tmpd</span> <span class="op">&gt;</span> <span class="fl">80</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chic.f</span>, <span class="va">date</span>, <span class="va">tmpd</span>, <span class="va">pm25tmean2</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 17 × 3</span></span></span>
 <span><span class="co">##    date        tmpd pm25tmean2</span></span>
 <span><span class="co">##    <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
@@ -697,10 +697,10 @@ function simplifies the process quite a bit.</p>
 first row is the earliest (oldest) observation and the last row is the
 latest (most recent) observation.</p>
 <div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">chicago</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">date</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">chicago</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">date</span><span class="op">)</span></span></code></pre></div>
 <p>We can now check the first few rows</p>
 <div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">date</span>, <span class="va">pm25tmean2</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">date</span>, <span class="va">pm25tmean2</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 3 × 2</span></span></span>
 <span><span class="co">##   date       pm25tmean2</span></span>
 <span><span class="co">##   <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
@@ -709,7 +709,7 @@ latest (most recent) observation.</p>
 <span><span class="co">## <span style="color: #BCBCBC;">3</span> 1987-01-03         <span style="color: #BB0000;">NA</span></span></span></code></pre>
 <p>and the last few rows.</p>
 <div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">tail</a></span><span class="op">(</span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">date</span>, <span class="va">pm25tmean2</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">tail</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">date</span>, <span class="va">pm25tmean2</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 3 × 2</span></span></span>
 <span><span class="co">##   date       pm25tmean2</span></span>
 <span><span class="co">##   <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
@@ -719,11 +719,11 @@ latest (most recent) observation.</p>
 <p>Columns can be arranged in descending order too by useing the special
 <code><a href="https://dplyr.tidyverse.org/reference/desc.html" class="external-link">desc()</a></code> operator.</p>
 <div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">chicago</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html" class="external-link">desc</a></span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">chicago</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html" class="external-link">desc</a></span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Looking at the first three and last three rows shows the dates in
 descending order.</p>
 <div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">date</span>, <span class="va">pm25tmean2</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">date</span>, <span class="va">pm25tmean2</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 3 × 2</span></span></span>
 <span><span class="co">##   date       pm25tmean2</span></span>
 <span><span class="co">##   <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
@@ -731,7 +731,7 @@ descending order.</p>
 <span><span class="co">## <span style="color: #BCBCBC;">2</span> 2005-12-30      15.1 </span></span>
 <span><span class="co">## <span style="color: #BCBCBC;">3</span> 2005-12-29       7.45</span></span></code></pre>
 <div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">tail</a></span><span class="op">(</span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">date</span>, <span class="va">pm25tmean2</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">tail</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">date</span>, <span class="va">pm25tmean2</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 3 × 2</span></span></span>
 <span><span class="co">##   date       pm25tmean2</span></span>
 <span><span class="co">##   <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
@@ -762,7 +762,7 @@ data.</p>
 <p>However, these names are pretty obscure or awkward and probably be
 renamed to something more sensible.</p>
 <div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">chicago</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span><span class="va">chicago</span>, dewpoint <span class="op">=</span> <span class="va">dptp</span>, pm25 <span class="op">=</span> <span class="va">pm25tmean2</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">chicago</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span><span class="va">chicago</span>, dewpoint <span class="op">=</span> <span class="va">dptp</span>, pm25 <span class="op">=</span> <span class="va">pm25tmean2</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">chicago</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 3 × 5</span></span></span>
 <span><span class="co">##   city   tmpd dewpoint date        pm25</span></span>
@@ -792,7 +792,7 @@ level).</li>
 <p>Here, we create a <code>pm25detrend</code> variable that subtracts
 the mean from the <code>pm25</code> variable.</p>
 <div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">chicago</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span><span class="va">chicago</span>, pm25detrend <span class="op">=</span> <span class="va">pm25</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">pm25</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">chicago</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span><span class="va">chicago</span>, pm25detrend <span class="op">=</span> <span class="va">pm25</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">pm25</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">chicago</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 6 × 9</span></span></span>
 <span><span class="co">##   city   tmpd dewpoint date        pm25 pm10tmean2 o3tmean2 no2tmean2 pm25detr…¹</span></span>
@@ -809,9 +809,9 @@ does the same thing as <code><a href="https://dplyr.tidyverse.org/reference/muta
 non-transformed variables</strong>.</p>
 <p>Here, we de-trend the PM10 and ozone (O3) variables.</p>
 <div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">transmute</a></span><span class="op">(</span><span class="va">chicago</span>, </span>
-<span>                      pm10detrend <span class="op">=</span> <span class="va">pm10tmean2</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">pm10tmean2</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
-<span>                      o3detrend <span class="op">=</span> <span class="va">o3tmean2</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">o3tmean2</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">transmute</a></span><span class="op">(</span><span class="va">chicago</span>, </span>
+<span>               pm10detrend <span class="op">=</span> <span class="va">pm10tmean2</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">pm10tmean2</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>               o3detrend <span class="op">=</span> <span class="va">o3tmean2</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">o3tmean2</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 6 × 2</span></span></span>
 <span><span class="co">##   pm10detrend o3detrend</span></span>
 <span><span class="co">##         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
@@ -852,15 +852,16 @@ group of variables (<code><a href="https://dplyr.tidyverse.org/reference/group_b
 <p>First, we can create a <code>year</code> variable using
 <code><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">as.POSIXlt()</a></code>.</p>
 <div class="sourceCode" id="cb59"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">chicago</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span><span class="va">chicago</span>, year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">as.POSIXlt</a></span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">$</span><span class="va">year</span> <span class="op">+</span> <span class="fl">1900</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">chicago</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span><span class="va">chicago</span>, year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">as.POSIXlt</a></span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">$</span><span class="va">year</span> <span class="op">+</span> <span class="fl">1900</span><span class="op">)</span></span></code></pre></div>
 <p>Now we can create a separate data frame that splits the original data
 frame by year.</p>
 <div class="sourceCode" id="cb60"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">years</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">year</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">years</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">chicago</span>, <span class="va">year</span><span class="op">)</span></span></code></pre></div>
 <p>Finally, we compute summary statistics for each year in the data
 frame with the <code><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarize()</a></code> function.</p>
 <div class="sourceCode" id="cb61"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarize</a></span><span class="op">(</span><span class="va">years</span>, pm25 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">pm25</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, </span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarize</a></span><span class="op">(</span><span class="va">years</span>, </span>
+<span>          pm25 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">pm25</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, </span>
 <span>          o3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">o3tmean2</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, </span>
 <span>          no2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html" class="external-link">median</a></span><span class="op">(</span><span class="va">no2tmean2</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 19 × 4</span></span></span>
@@ -914,9 +915,9 @@ left-to-right fashion, i.e.</p>
 <p>Take the example that we just did in the last section, but here use
 the pipe operator in a single expression.</p>
 <div class="sourceCode" id="cb65"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span><span class="va">chicago</span>, year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">as.POSIXlt</a></span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">$</span><span class="va">year</span> <span class="op">+</span> <span class="fl">1900</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>    </span>
-<span>        <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>        <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarize</a></span><span class="op">(</span><span class="va">years</span>, pm25 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">pm25</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, </span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span><span class="va">chicago</span>, year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">as.POSIXlt</a></span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">$</span><span class="va">year</span> <span class="op">+</span> <span class="fl">1900</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>    </span>
+<span>        <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>        <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarize</a></span><span class="op">(</span><span class="va">years</span>, pm25 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">pm25</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, </span>
 <span>          o3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">o3tmean2</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, </span>
 <span>          no2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html" class="external-link">median</a></span><span class="op">(</span><span class="va">no2tmean2</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 131,860 × 12</span></span></span>
@@ -967,20 +968,20 @@ is quite large.</li>
 <h4 id="example-4">Example<a class="anchor" aria-label="anchor" href="#example-4"></a>
 </h4>
 <div class="sourceCode" id="cb67"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice_sample</a></span><span class="op">(</span><span class="va">chicago</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice_sample</a></span><span class="op">(</span><span class="va">chicago</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 10 × 10</span></span></span>
 <span><span class="co">##    city   tmpd dewpoint date        pm25 pm10tme…¹ o3tme…² no2tm…³ pm25d…⁴  year</span></span>
 <span><span class="co">##    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 1</span> chic   75       66.5 2005-06-12  13.2      18     26.9     13.5  -<span style="color: #BB0000;">3.05</span>   <span style="text-decoration: underline;">2</span>005</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 2</span> chic   21       21.2 1994-02-12  <span style="color: #BB0000;">NA</span>        37      4.24    41.8  <span style="color: #BB0000;">NA</span>      <span style="text-decoration: underline;">1</span>994</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 3</span> chic   71       55.8 1991-06-18  <span style="color: #BB0000;">NA</span>        33     45.1     23.5  <span style="color: #BB0000;">NA</span>      <span style="text-decoration: underline;">1</span>991</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 4</span> chic   77       63.4 2000-07-14  11.5      23     32.7     18.3  -<span style="color: #BB0000;">4.72</span>   <span style="text-decoration: underline;">2</span>000</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 5</span> chic   14        4.1 2001-12-29   8.2      32     17.6     18.1  -<span style="color: #BB0000;">8.03</span>   <span style="text-decoration: underline;">2</span>001</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 6</span> chic   51       42.8 1994-10-05  <span style="color: #BB0000;">NA</span>        40.1    5.54    31.9  <span style="color: #BB0000;">NA</span>      <span style="text-decoration: underline;">1</span>994</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 7</span> chic   74       64.2 2000-07-06  16.9      26.5   38.0     15.6   0.669  <span style="text-decoration: underline;">2</span>000</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 8</span> chic   57       40.9 1994-10-29  <span style="color: #BB0000;">NA</span>        41.9   16.8     28.5  <span style="color: #BB0000;">NA</span>      <span style="text-decoration: underline;">1</span>994</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;"> 9</span> chic   35       23.8 1987-11-11  <span style="color: #BB0000;">NA</span>        31.3    7.96    27.6  <span style="color: #BB0000;">NA</span>      <span style="text-decoration: underline;">1</span>987</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">10</span> chic   29.5     24.9 1994-01-03  <span style="color: #BB0000;">NA</span>        16      9.18    22.5  <span style="color: #BB0000;">NA</span>      <span style="text-decoration: underline;">1</span>994</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 1</span> chic   42       33.5 2003-04-17  12.6      22     23.3     23.2   -<span style="color: #BB0000;">3.58</span>  <span style="text-decoration: underline;">2</span>003</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 2</span> chic   46.5     36.2 1993-11-23  <span style="color: #BB0000;">NA</span>        27      2.46    35.6   <span style="color: #BB0000;">NA</span>     <span style="text-decoration: underline;">1</span>993</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 3</span> chic   45       37.7 1998-12-01  17.8      22.8    3.64    25.0    1.62  <span style="text-decoration: underline;">1</span>998</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 4</span> chic   57       39.8 1999-09-22  <span style="color: #BB0000;">NA</span>        30     13.7     33.8   <span style="color: #BB0000;">NA</span>     <span style="text-decoration: underline;">1</span>999</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 5</span> chic   75       61.6 2005-07-05  <span style="color: #BB0000;">NA</span>        22.5   30.3     13.4   <span style="color: #BB0000;">NA</span>     <span style="text-decoration: underline;">2</span>005</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 6</span> chic   44       35.7 2003-10-29  <span style="color: #BB0000;">NA</span>        18.5    7.26    16.5   <span style="color: #BB0000;">NA</span>     <span style="text-decoration: underline;">2</span>003</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 7</span> chic   48.5     39.5 1987-03-06  <span style="color: #BB0000;">NA</span>        76      9.08    47.2   <span style="color: #BB0000;">NA</span>     <span style="text-decoration: underline;">1</span>987</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 8</span> chic   54       38.4 2003-04-02  29.8      51     19.7     31.8   13.6   <span style="text-decoration: underline;">2</span>003</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;"> 9</span> chic   58.5     46.4 1995-09-09  <span style="color: #BB0000;">NA</span>        13     23.3     17.6   <span style="color: #BB0000;">NA</span>     <span style="text-decoration: underline;">1</span>995</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">10</span> chic   56       38.9 1999-09-30   9.1      29.5   13.5     26.3   -<span style="color: #BB0000;">7.13</span>  <span style="text-decoration: underline;">1</span>999</span></span>
 <span><span class="co">## <span style="color: #949494;"># … with abbreviated variable names ¹​pm10tmean2, ²​o3tmean2, ³​no2tmean2,</span></span></span>
 <span><span class="co">## <span style="color: #949494;">#   ⁴​pm25detrend</span></span></span></code></pre>
 <p>You can also use <code><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice_head()</a></code> or
@@ -989,7 +990,7 @@ of your tibble. Again the number of rows can be specified with the
 <code>n</code> argument.</p>
 <p>This will show the first 5 rows.</p>
 <div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice_head</a></span><span class="op">(</span><span class="va">chicago</span>, n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice_head</a></span><span class="op">(</span><span class="va">chicago</span>, n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 5 × 10</span></span></span>
 <span><span class="co">##   city   tmpd dewpoint date        pm25 pm10tmean2 o3tme…¹ no2tm…² pm25d…³  year</span></span>
 <span><span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
@@ -1001,7 +1002,7 @@ of your tibble. Again the number of rows can be specified with the
 <span><span class="co">## <span style="color: #949494;"># … with abbreviated variable names ¹​o3tmean2, ²​no2tmean2, ³​pm25detrend</span></span></span></code></pre>
 <p>This will show the last 5 rows.</p>
 <div class="sourceCode" id="cb71"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice_tail</a></span><span class="op">(</span><span class="va">chicago</span>, n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice_tail</a></span><span class="op">(</span><span class="va">chicago</span>, n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 5 × 10</span></span></span>
 <span><span class="co">##   city   tmpd dewpoint date        pm25 pm10tmean2 o3tme…¹ no2tm…² pm25d…³  year</span></span>
 <span><span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
@@ -1218,7 +1219,7 @@ adding a linear regression.</p>
 function.</p>
 <div class="sourceCode" id="cb87"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">penguins</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span>, </span>
 <span>             y <span class="op">=</span> <span class="va">bill_length_mm</span>, </span>
 <span>             color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
